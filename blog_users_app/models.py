@@ -12,9 +12,9 @@ class Profile(models.Model):
     def __str__(self):
         return '{} Profile'.format(self.user.username)
 
-    #overriding save method
+    # overriding save method
     def save(self , *args, **kwargs):
-        super().save()
+        super().save(*args, **kwargs)
 
         img = Image.open(self.image.path)
 
