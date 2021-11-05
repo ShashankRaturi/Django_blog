@@ -32,7 +32,7 @@ from .models import Post
 
 def home(request):
     context = {'posts' : Post.objects.all()}
-    return render(request , 'blog_app\home.html' , context)
+    return render(request , 'blog_app/home.html' , context)
 
 
 #class based view

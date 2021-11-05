@@ -24,7 +24,7 @@ urlpatterns = [
     path('register/' , users_app_view.register , name = 'register'),
     path('admin/', admin.site.urls),
     path('profile/' , users_app_view.profile , name = 'profile'),
-    path('login/' , auth_views.LoginView.as_view(template_name = 'blog_users_app/login.html') , name = 'login'),
+    path('/login/' , auth_views.LoginView.as_view(template_name = 'blog_users_app/login.html') , name = 'login'),
     path('logout/' ,auth_views.LogoutView.as_view(template_name = 'blog_users_app/logout.html') , name = 'logout'),
 
     # path('password-reset/' , auth_views.PasswordResetView.as_view(template_name = 'blog_users_app/password_reset.html') , name = 'password_reset'),
